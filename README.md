@@ -7,7 +7,7 @@ Then change the reaction word to your Mudae's language
 
 Example:
 
-For english user:
+For english users:
 
 console.log(str.includes('React'));
 if (str.includes('React'))
