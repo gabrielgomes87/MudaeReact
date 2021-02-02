@@ -18,3 +18,9 @@ console.log(str.includes('Reaja'));
 if (str.includes('Reaja'))
 
 Make the change depending on your language
+
+
+I am Brazilian and new to programming, feel free to use my code or leave any suggestions.
+
+
+:D
