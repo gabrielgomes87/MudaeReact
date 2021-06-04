@@ -12,10 +12,13 @@ client.login('TOKEN_HERE');
 client.on("message", (msg) => {
     msg.embeds.forEach((embed) => {
         var str = embed.description
-        var color = embed.color
         console.log(embed.description);
-        if (color === 16751916 || color === 1360437)
+        console.log(str.includes('Reaja'));
+        if (str.includes('Reaja'))
+        console.log(str.includes('React'));
+        if (str.includes('Reaja'))
+            msg.react('♥️');
+        if (str.includes('React'))
             msg.react('♥️');
         });
 });
-
