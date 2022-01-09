@@ -6,6 +6,7 @@
 ![](https://i.imgur.com/saFmsYO.png")
 
 # 
-I am Brazilian and I am starting to program in javascript, feel free to use my code or leave any suggestions
+
+feel free to use my code or leave any suggestions
 
 :D
