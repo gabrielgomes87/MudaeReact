@@ -1,35 +1,29 @@
-const Discord = require('discord.js');
-
-const client = new Discord.Client();
-
-client.once('ready', () => {
-    console.log('Mudae React ON!');
+const { Client, GatewayIntentBits } = require('discord.js');
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildMessageReactions,
+    ],
 });
 
-client.login('TOKEN_HERE');
+client.once('ready', () => {
+    console.log(`logged ${client.user.tag}`);
+});
 
+client.on('messageCreate', (message) => {
+    if (message.embeds.length > 0) { 
+        message.embeds.forEach((embed) => {
+            const description = embed.description.toLowerCase();             
+            if (description.includes('reaja') || description.includes('react') || description.includes('reaccione') || description.includes('réagissez')) {
+                message.react('❤️') 
+                    .then(() => console.log('React Emoji Sent!')) 
+                    .catch(console.error); 
+            }
+        });
+    }
+});
 
-client.on("message", (msg) => {
-    msg.embeds.forEach((embed) => {
-        var str = embed.description
-        console.log(embed.description);
-    try{
-        if (str.includes('Reaja')){
-          msg.react('♥️');
-        console.log(str.includes('Reaja'))
-        } else if (str.includes ('React')){
-          msg.react('♥️');
-        console.log(str.includes('React'))
-        } else if (str.includes('Reaccione')){
-          msg.react('♥️');
-        console.log(str.includes('Reaccione'))
-        } else if (str.includes ('Réagissez')){
-          msg.react('♥️');
-        console.log(str.includes('Réagissez'))
-        }
-    }
-    catch(e) {
-      if (e.name.toString() == "TypeError")
-        console.log("Error Null")
-    }
-})});
+client.login('BOT_TOKEN_HERE'); 
