@@ -1,12 +1,26 @@
-### how does it work ?
 
-- Simple reaction bot for mudae messages
+## Bot for Auto Reaction Mudae Rolls
 
 
-![](https://i.imgur.com/saFmsYO.png")
+    
+![Logo](https://i.imgur.com/saFmsYO.png)
 
-# 
 
-feel free to use my code or leave any suggestions
+## How to install
 
-:D
+- Download and install NodeJS
+- Inside the folder run theses commands:
+
+```bash
+  npm init -y
+```
+
+```bash
+  node run main.js
+```
+## Need help ?
+
+DM me on Discord @all0y 
+
+see ya!
+

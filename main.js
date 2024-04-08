@@ -16,14 +16,16 @@ client.once('ready', () => {
 client.on('messageCreate', (message) => {
     if (message.embeds.length > 0) { 
         message.embeds.forEach((embed) => {
-            const description = embed.description.toLowerCase();             
-            if (description.includes('reaja') || description.includes('react') || description.includes('reaccione') || description.includes('réagissez')) {
-                message.react('❤️') 
-                    .then(() => console.log('React Emoji Sent!')) 
-                    .catch(console.error); 
+            if (embed && embed.description) { 
+                const description = embed.description.toLowerCase(); 
+                if (description.includes('reaja') || description.includes('react') || description.includes('reaccione') || description.includes('réagissez')) {
+                    message.react('❤️') 
+                        .then(() => console.log('React Emoji Sent!')) 
+                        .catch(console.error); 
+                }
             }
         });
     }
 });
 
-client.login('BOT_TOKEN_HERE'); 
+client.login('BOT_TOKEN_HERE');
