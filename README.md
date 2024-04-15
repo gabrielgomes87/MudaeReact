@@ -22,5 +22,5 @@
 
 DM me on Discord @all0y 
 
-see ya! teste
+see ya!
 
